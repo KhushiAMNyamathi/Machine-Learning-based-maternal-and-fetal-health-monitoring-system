@@ -1,0 +1,111 @@
+{% extends "base1.html" %} 
+
+
+{% block content %}
+
+
+<body style="background-image:url('static/img.png'); background-size:cover;">
+
+    <div class="col-md-6" style="margin-left:auto;margin-right:auto;widht:500px;background-color:ivory;">
+    
+        <h2>Diabetic classification form</h2>
+        <form name="f1" action="/diabetic" method="post">
+    
+            <table class="table">
+    
+                <tr>
+                    <td>
+                        Pregncies
+                    </td>
+                    <td>
+                        <input type="number" name="prgnum" required />
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td>
+                        Glucose plasma
+                    </td>
+                    <td>
+                        <input type="number" name="glupl" step="0.01" required />
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td>
+                        Bp
+                    </td>
+                    <td>
+                        <input type="number" name="bp" step="0.01" required />
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td>
+                        Skin thickness
+                    </td>
+                    <td>
+                        <input type="number" name="skinth" step="0.01" required />
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td>
+                        Insulin
+                    </td>
+                    <td>
+                        <input type="number" name="insulin" step="0.01" required />
+                    </td>
+                </tr>
+    
+    
+                <tr>
+                    <td>
+                        Body mass
+                    </td>
+                    <td>
+                        <input type="number" name="bodymass" step="0.01" required />
+                    </td>
+                </tr>
+    
+    
+                <tr>
+                    <td>
+                        Diabetes pedigree function
+                    </td>
+                    <td>
+                        <input type="number" name="diabped" step="0.01" required />
+                    </td>
+                </tr>
+    
+    
+                <tr>
+                    <td>
+                        Age
+                    </td>
+                    <td>
+                        <input type="number" name="age" step="1" required />
+                    </td>
+                </tr>
+    
+    
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" class="btn btn-lg btn-primary"
+                    </td>
+                </tr>
+    
+            </table>
+        </form>
+        {% if result: %}
+    
+        <h1 class="text-primary">{{result}}</h1>
+        {% endif %}
+    
+    
+    </div>	
+    
+    
+    
+    </body>
+    {% endblock %}

@@ -1,0 +1,32 @@
+img{
+
+    border:2px solid black;
+    width:300px;
+
+    height:200px;
+
+    border-radius:10px;
+}
+
+#details{
+
+font-size:20px;
+color:blue;
+
+
+}
+body{
+
+    //background-image:url({{url_for('static',filename='plant.png')}});
+
+    background-color:lightblue;
+}
+
+#chooser{
+
+    width:300px;
+    height:44px;
+    background-color:green;
+    border-radius:20px;
+
+}

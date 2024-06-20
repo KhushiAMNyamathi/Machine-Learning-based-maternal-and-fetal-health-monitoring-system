@@ -1,0 +1,75 @@
+{% extends "base1.html" %} 
+
+
+{% block content %}
+
+
+<body style="background-image:url('static/img.png'); background-size:cover;">
+
+    <div class="col-md-12" style="background-color: aquamarine;">
+    
+        <h2>Maternal Risk Prediction Form</h2>
+        <form name="f1" action="/maternal" method="post" >
+            <table class="table">
+    
+                <tr>
+                    <th>Age</th>
+                    <th>Systolic BP</th>
+                    <th>Diostolic BP</th>
+                   
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" required name="age">
+                    </td>
+                    <td>
+                        <input type="text" required name="sbp">
+                    </td>
+                    <td>
+                        <input type="text" required name="dbp">
+                    </td>
+                    
+                </tr>
+
+                <tr>
+                    <th>BS</th>
+                    <th>Body temparature</th>
+                    <th>Heart Rate</th>
+
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="text" required name="bs">
+                    </td>
+                    <td>
+                        <input type="text" required name="temp">
+                    </td>
+                    <td>
+                        <input type="text" required name="heart">
+                    </td>
+                    
+                </tr>
+
+                <tr>
+                    <td colspan="3" class="text-center">
+
+                        <input type="submit" value="Predict">
+                    </td>
+                </tr>
+
+    
+            </table>
+        </form>
+        {% if result: %}
+    
+        <h1 class="text-primary">{{result}}</h1>
+        {% endif %}
+    
+    
+    </div>	
+    
+    
+    
+    </body>
+    {% endblock %}

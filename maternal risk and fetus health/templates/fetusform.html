@@ -1,0 +1,97 @@
+{% extends "base1.html" %} 
+
+
+{% block content %}
+
+
+<body style="background-image:url('static/img.png'); background-size:cover;">
+
+    <div class="col-md-12" style="background-color: aquamarine;">
+    
+        <h2>Fetus Health Prediction Form</h2>
+        <form name="f1" action="/fetus" method="post" >
+            <table class="table">
+    
+                <tr>
+                    <th>accelerations</th>
+                    <th>prolongued_decelerations</th>
+                    <th>abnormal_short_term_variability</th>
+                   
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" required name="acc">
+                    </td>
+                    <td>
+                        <input type="text" required name="pd">
+                    </td>
+                    <td>
+                        <input type="text" required name="astv">
+                    </td>
+                    
+                </tr>
+
+                <tr>
+                    <th>percentage_of_time_with <br/>abnormal_long_term_variability</th>
+                    <th>histogram_mode</th>
+                    <th>histogram_mean</th>
+
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="text" required name="pot">
+                    </td>
+                    <td>
+                        <input type="text" required name="hm">
+                    </td>
+                    <td>
+                        <input type="text" required name="hmean">
+                    </td>
+                    
+                </tr>
+
+
+
+                <tr>
+                    <th>histogram_median </th>
+                    <th colspan="2">histogram_variance</th>
+                   
+
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="text" required name="hmedian">
+                    </td>
+                    <td >
+                        <input type="text" required name="hvariance">
+                    </td>
+                    <td>
+                      
+
+                            <input type="submit" value="Predict" class="btn btn-primary btn-lg">
+                        
+                    </td>
+                    
+                </tr>
+
+
+
+                
+
+    
+            </table>
+        </form>
+        {% if result: %}
+    
+        <h1 class="text-primary">{{result}}</h1>
+        {% endif %}
+    
+    
+    </div>	
+    
+    
+    
+    </body>
+    {% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base.html" %} {% block content %}
+
+
+
+<h2 class="text-danger bg-info" >&nbsp;About us</h2>
+
+<div class="container-fluid bg-primary"> 
+</div>
+
+<div class="container-fluid " id="details" style="background-color:honeydew;">
+
+    <h5 class="text-primary">Use this app to classify details of patients</h5>
+
+<p>
+In this project, we will be predicting that whether the patient has maternal risk or not on the basis of the features we will provide to our machine learning model, and for that,also helps to predict fetus health 
+</p>
+</div>
+<style>
+img{
+width:300px;
+height:300px;
+}
+</style>
+
+<div class="container">
+
+	<div class="row">
+    <div class="col-sm">
+     <img   src="{{url_for('static',filename='img.png')}}" />
+    </div>
+    
+
+
+</div>
+{% endblock %}
